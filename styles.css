@@ -55,7 +55,7 @@ html{
     top:3%;
     justify-content: space-evenly;
 }
-.side-footer{
+.side-footerBottom{
     width:100%;
     position: absolute;
     display: flex;
@@ -63,7 +63,7 @@ html{
     bottom:3%;
     justify-content: space-evenly;
 }
-.side-footer img{
+.side-footerBottom img{
     width:50px;
     height:50px;
     flex-shrink: 3; /* currently shrinking doesnt work : ( */

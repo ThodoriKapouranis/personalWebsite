@@ -3,11 +3,12 @@ menuValue=[0,0,0,0];
 
 function controlMenuColor(){
     for (i=0; i<4; i++){
-        if (menuValue[i]==0){ //if button is unclicked 
+        //Changes back to original color if not clicked
+        if (menuValue[i]==0){ 
             document.getElementById(menuID[i]).style.backgroundColor="#a2e8b8";
             document.getElementById(menuID[i]).style.opacity=0.4;
         }
-        
+        //Changes color on click
         else{
             document.getElementById(menuID[i]).style.backgroundColor="#6adf8e";
             document.getElementById(menuID[i]).style.opacity=1;
