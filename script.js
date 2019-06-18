@@ -3,12 +3,14 @@ menuValue=[0,0,0,0];
 
 function controlMenuColor(){
     for (i=0; i<4; i++){
-        if (menuValue[i]==0){ //if corresponding menu value 0
-            document.getElementById(menuID[i]).style.backgroundColor="white";
-        }
-
-        else{
+        if (menuValue[i]==0){ //if button is unclicked 
             document.getElementById(menuID[i]).style.backgroundColor="#a2e8b8";
+            document.getElementById(menuID[i]).style.opacity=0.4;
+        }
+        
+        else{
+            document.getElementById(menuID[i]).style.backgroundColor="#6adf8e";
+            document.getElementById(menuID[i]).style.opacity=1;
         }
     }
 }
@@ -31,3 +33,20 @@ function createMenuClickEvent(i){ //to give functionality to menu btns
 for (i=0; i<4; i++){
     createMenuClickEvent(i);
 };
+
+
+
+//For the project icons
+function projectLoad(i){
+    var item=document.getElementsByClassName('project-box')[i];
+    item.animate([
+        {opacity:'0'},
+        {opacity:'1'},
+    ],
+    {
+        duration:500,
+        easing: "ease-in",
+        iterations:1,
+        fill: 'forwards',
+    });
+}

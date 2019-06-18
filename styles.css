@@ -27,8 +27,8 @@ html{
 .side-btn{
     font-family: 'Cinzel', serif;
     font-weight: 100;
-    background-color: gray;
-    opacity: 0.7;
+    background-color: #a2e8b8;
+    opacity: 0.4;
     position: relative;
     -webkit-user-select: none; /* Safari */    /*   This is so there */
     -moz-user-select: none; /* Firefox */     /* is no cursor change*/
@@ -44,7 +44,8 @@ html{
     transition: 0.3s;    
 }
 .side-btn:hover{
-    opacity: 1;
+    color: #a2e8b8;
+    opacity: 1!important;
 }
 .side-footerTop{
     width:100%;
