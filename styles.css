@@ -1,0 +1,111 @@
+*{
+    color: rgba(0,0,0,.85); /* default text color*/
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+.side-bar{
+    position: absolute;
+    display: flexbox;
+    height: 100%;
+    width: 22%;
+    right:78%;
+    top:0%;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    justify-content: center;
+
+    background-color: rgba(0,0,0,0);
+
+}
+
+.side-btn{
+    font-family: 'Cinzel', serif;
+    font-weight: 100;
+    background-color: gray;
+    opacity: 0.7;
+    position: relative;
+    -webkit-user-select: none; /* Safari */    /*   This is so there */
+    -moz-user-select: none; /* Firefox */     /* is no cursor change*/
+    -ms-user-select: none; /* IE10+/Edge */  /* when hovering over */
+    user-select: none; /* Standard */       /* the menu options  */
+    top:30%;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    text-align: center;
+    font-size: 2rem;
+    transition: 0.3s;    
+}
+.side-btn:hover{
+    opacity: 1;
+}
+.side-footerTop{
+    width:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top:3%;
+    justify-content: space-evenly;
+}
+.side-footer{
+    width:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom:3%;
+    justify-content: space-evenly;
+}
+.side-footer img{
+    width:50px;
+    height:50px;
+    flex-shrink: 3; /* currently shrinking doesnt work : ( */
+}
+
+.content-container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    height: 100%;
+    width: 78%;
+    left:22%;
+    top:0%;
+    margin:0px;
+    padding:0%;
+    /*overflow-y:hidden;*/
+    overflow-x:hidden;
+    background-color: #b7f6f8 
+}
+
+.project-box{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 15px black;
+    background-color: rgba(255,255,255,.4);
+}
+
+@keyframes project-box-hover-gradual-change{
+    from{
+        background-color: rgba(255,255,255,.4);
+    }
+    to{
+        background-color: rgba(0,0,0,.2);
+    }
+}
+.project-box:hover{
+    animation-name: project-box-hover-gradual-change;
+    animation-duration: .5s;
+    animation-fill-mode: forwards; /*keeps the animation color*/
+}
