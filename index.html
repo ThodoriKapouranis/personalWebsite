@@ -2,9 +2,10 @@
 <html>
     <head>
         <script src="jquery.js"> </script>
+        <script src="projectinfo.js"> </script>
         <script src="script.js"> </script>
 
-        <title>main</title>
+        <title>Website</title>
         <meta author="Thodori Kapouranis">
         <link href="styles.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cinzel:400,900&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
     <body>
         <div class=side-bar>
 
-            <footer class=side-footerTop> <!--In case I want to add contact link-->
+            <footer class=side-footerTop>
                 <center><b><font size = "25">Thodori Kapouranis</font></b></center>
             </footer>
 
@@ -41,8 +42,11 @@
         </div>
 
         
-        <div class=content-container>    
-            <div class=project-box></div>
+        <div class=content-container>   
+                <div id="locations" data-locations='[{"name":"Bath","url":"/location/bath","img":"/thumb.jpg"},{"name":"Berkhamsted","url":"/location/berkhamsted","img":"/thumb.jpg"}]'
+            <div class=project-box>
+                <img src = "projectImage[0]">
+            </div>
             <div class=project-box></div>
             <div class=project-box></div>
             <div class=project-box></div>

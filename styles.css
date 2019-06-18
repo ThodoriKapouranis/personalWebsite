@@ -109,3 +109,10 @@ html{
     animation-duration: .5s;
     animation-fill-mode: forwards; /*keeps the animation color*/
 }
+
+.project-Title{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+
+}
