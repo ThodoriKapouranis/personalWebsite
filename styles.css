@@ -6,13 +6,17 @@ html{
     height: 100%;
     width: 100%;
 }
+@keyframes null{
+    from{}
+    to{}
+}
 
 .side-bar{
     position: absolute;
     display: flexbox;
     height: 100%;
-    width: 22%;
-    right:78%;
+    width: 18%;
+    right:82%;
     top:0%;
     margin: 0px;
     padding: 0px;
@@ -20,8 +24,20 @@ html{
     overflow-x: hidden;
     justify-content: center;
 
-    background-color: rgba(0,0,0,0);
+    background-color: rgb(255,255,255);
 
+}
+@keyframes side-btn-color-change{
+    from{
+        background-color: rgb(243, 243, 243);
+    }
+    to{
+        background-color: #b5f8af;
+    }
+}
+@keyframes side-btn-appear{
+    from{opacity:0};
+    to{opacity:1};
 }
 
 .side-btn{
@@ -38,10 +54,14 @@ html{
     margin-top: .25rem;
     margin-bottom: .25rem;
     text-align: center;
-    font-size: 2.5rem;    
+    font-size: 2rem;
+    opacity:0;
+    
 }
 .side-btn:hover{
-    background-color: #b5f8af!important; 
+    animation-name: side-btn-color-change!important;
+    animation-duration: .3s;
+    animation-fill-mode: forwards; 
     /* using !important because CSS will see that script.js has some code that dictates background-color and automatically stop itself from applying this.*/ 
 }
 .side-footer{
@@ -58,17 +78,83 @@ html{
     flex-shrink: 3; /* currently shrinking doesnt work : ( */
 }
 
-.content{
+.content-container{
     position: absolute;
-    display: flexbox;
-    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
     height: 100%;
-    width: 78%;
-    left:22%;
+    width: 82%;
+    left: 18%;
     top:0%;
     margin:0px;
     padding:0px;
-    overflow-y:hidden;
+    /*overflow-y:hidden;*/
     overflow-x:hidden;
-    background-color: #b7f6f8 
+    background-color: #b7f6f8; 
+}
+
+
+.project-box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: rgba(255,255,255,.4);
+    -webkit-user-select: none; /* Safari */    /*   This is so there */
+    -moz-user-select: none; /* Firefox */     /* is no cursor change*/
+    -ms-user-select: none; /* IE10+/Edge */  /* when hovering over */
+    user-select: none; /* Standard */       /* the menu options  */
+    animation-name: project-box-Appear;
+    animation-duration:1s;
+}
+.project-title{
+    position:relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    width:100%;
+    height:26%;
+    background-color: rgba(0,0,0,.4);
+}
+.project-info{
+    position:absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.2rem;
+    text-indent: 2rem;
+    top:27.5%;
+    left:2.5%;
+    color:rgba(255,255,255,.8);
+    width:95%;
+    height:70%;
+}
+
+.project-date{
+    position:absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    width: 40%;
+    height:7%;
+    text-align: center;
+    bottom:-8.5%;
+    right:0%;
+    color: rgba(0,0,0,.65);
+    background-color: rgba(255,255,255,0.4);
+}
+
+@keyframes project-box-hover-gradual-change{
+    from{
+        background-color: rgba(255,255,255,.4);
+    }
+    to{
+        background-color: rgba(0,0,0,.4);
+    }
+}
+.project-box:hover{
+    animation-name: project-box-hover-gradual-change;
+    animation-duration: .75s;
+    animation-fill-mode: forwards; /*keeps the animation color*/
 }
