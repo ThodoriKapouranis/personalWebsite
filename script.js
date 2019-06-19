@@ -21,12 +21,12 @@ function menuLoad(i){
 function projectLoad(i){
     var item=document.getElementsByClassName('project-box')[i];
     item.animate([
-        {opacity:'0'},
-        {opacity:'1'},
+        {opacity:'0', transform:'TranslateY(50%)'},
+        {opacity:'1', transform:'TranslateY(0%)'},
     ],
     {
         duration:500,
-        easing: "ease-in",
+        easing: "ease-out",
         iterations:1,
         fill: 'forwards',
     });
@@ -38,9 +38,6 @@ window.onload = function(){
     }
 };
 
-$(document).on('load', "#proj0", function(){
-    alert('a');
-});
 
 function controlMenuColor(){
     for (i=0; i<4; i++){
@@ -87,10 +84,29 @@ function clearContent(){
 
 function displayProjectDescriptionEvent(i){
     $(document).on("mouseenter","#proj"+i,function(){
-        document.getElementsByClassName("project-info")[i].style.opacity=1;
+        document.getElementsByClassName("project-info")[i].animate([
+            
+            {opacity:'0'},
+            {opacity:'1'},
+        ],
+        {
+            duration:250,
+            iterations:1,
+            fill:'forwards'
+        })
     })
+
     $(document).on("mouseleave","#proj"+i, function(){
-        document.getElementsByClassName("project-info")[i].style.opacity=0;
+        document.getElementsByClassName("project-info")[i].animate([
+            
+            {opacity:'1'},
+            {opacity:'0'},
+        ],
+        {
+            duration:250,
+            iterations:1,
+            fill:'forwards'
+        })
     })
 }
 
@@ -107,12 +123,15 @@ function applyMenuOptions(){
             var currentTitle=document.createElement('div');
             var currentDate=document.createElement('div');
             var currentDescription=document.createElement('div');
+            var currentImage=document.createElement('img');
 
             currentBox.className="project-box";
             currentBox.id="proj"+i;
+
             currentTitle.className="project-title";
             currentDate.className="project-date";
             currentDescription.className="project-info";
+            currentImage.className="project-image";
             
             
             
@@ -120,15 +139,21 @@ function applyMenuOptions(){
             currentTitle.innerHTML=projectTitle[i];
             currentDescription.innerHTML=projectDescription[i];
             currentDate.innerHTML=projectDate[i];
+            currentImage.src=projectImage[i];
             currentDescription.style.opacity=0;
 
 
             document.getElementsByClassName("content-container")[0].appendChild(currentBox);
 
+            currentBox.appendChild(currentImage); // IMPORTANT THIS GOES 1ST!!
+            //or else its multiply CSS attribute will blend with EVERYTHING
             currentBox.appendChild(currentTitle);
             currentBox.appendChild(currentDate);
             currentBox.appendChild(currentDescription);
+            
+
             displayProjectDescriptionEvent(i);
+            projectLoad(i);
             
         }
     }

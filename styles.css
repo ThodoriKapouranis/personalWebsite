@@ -103,22 +103,27 @@ html{
     margin-top: 20px;
     margin-right: 5px;
     margin-left: 5px;
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255,255,255,0.4);
     -webkit-user-select: none; /* Safari */    /*   This is so there */
     -moz-user-select: none; /* Firefox */     /* is no cursor change*/
     -ms-user-select: none; /* IE10+/Edge */  /* when hovering over */
     user-select: none; /* Standard */       /* the menu options  */
-    animation-name: project-box-Appear;
-    animation-duration:1s;
+}
+.project-image{
+    width:300px;
+    height:300px;
+    mix-blend-mode: multiply;
 }
 .project-title{
-    position:relative;
+    position:absolute;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     text-align: center;
     width:100%;
     height:26%;
-    background-color: rgba(0,0,0,.4);
+    top:0%;
+    color:rgba(255,255,255,.8);
+    background-color: rgba(0,0,0,.6);
 }
 .project-info{
     position:absolute;
@@ -150,9 +155,10 @@ html{
         background-color: rgba(255,255,255,.4);
     }
     to{
-        background-color: rgba(0,0,0,.4);
+        background-color: rgba(0,0,0,.6);
     }
 }
+
 .project-box:hover{
     animation-name: project-box-hover-gradual-change;
     animation-duration: .75s;
