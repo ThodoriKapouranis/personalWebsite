@@ -55,20 +55,51 @@ html{
     top:3%;
     justify-content: space-evenly;
 }
-.side-footerBottom{
+
+/*Contact Buttons*/
+.side-footerBottomLeft{
     width:100%;
     position: absolute;
     display: flex;
     flex-direction: row;
     bottom:3%;
-    justify-content: space-evenly;
+    left:15%;
 }
-.side-footerBottom img{
+.side-footerBottomLeft img{
+    width:125px;
+    height:50px;
+    flex-shrink: 3; /* currently shrinking doesnt work : ( */
+}
+
+.side-footerBottomMiddle{
+    width:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom:3%;
+    left:42.5%;
+}
+.side-footerBottomMiddle img{
     width:50px;
     height:50px;
     flex-shrink: 3; /* currently shrinking doesnt work : ( */
 }
 
+.side-footerBottomRight{
+    width:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom:3%;
+    left:70%;
+}
+.side-footerBottomRight img{
+    width:50px;
+    height:50px;
+    flex-shrink: 3; /* currently shrinking doesnt work : ( */
+}
+
+/*Project Boxes*/
 .content-container{
     position: absolute;
     display: flex;
