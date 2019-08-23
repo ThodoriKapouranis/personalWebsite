@@ -2,10 +2,11 @@
 <html>
     <head>
         <script src="jquery.js"> </script>
-        <script src="projectinfo.js"> </script>
+        <script src="projects/projectinfo.js"> </script>
+        <script src="/homeimage/imageinfo.js"></script>
 
 
-        <title>main</title>
+        <title>Home</title>
         <meta author="Thodori Kapouranis">
         <link href="styles.css" rel="stylesheet">
 
@@ -25,7 +26,7 @@
         
             <h1 class=side-btn id=menu-home >Home</h1>
             <h1 class=side-btn id=menu-projects >Projects</h1>
-            <h1 class=side-btn id=menu-blog >broggu</h1>
+            <h1 class=side-btn id=menu-blog >Resources</h1>
             <h1 class=side-btn id=menu-about >About</h1>
      
 
@@ -39,8 +40,18 @@
         </div>
 
         
-        <div class=content-container>    
+        <div class=content-container>
         </div>
+
+        <div class=home-container id=homeContainer><!--Seperate cause I dont want flexbox-->
+
+            <img src="icons/arrow.png" class="arrow front" id="frontArrow">
+            <img src="icons/arrow.png" class="arrow back" id="backArrow">
+            
+            <img src="/homeimage/greens.png" class=home-image id=himg1>
+            <img src="/homeimage/blues.png" class=home-image  id=himg2>
+            <img src="/homeimage/purples.png" class=home-image id=himg3>
+    </div>
     
     </body> 
 <script src="script.js"> </script>

@@ -1,0 +1,1 @@
+homeImagePath=["/homeimage/greens.png", "/homeimage/blues.png","/homeimage/purples.png"];
