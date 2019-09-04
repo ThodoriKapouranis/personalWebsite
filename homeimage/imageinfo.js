@@ -1,1 +1,1 @@
-homeImagePath=["/homeimage/greens.png", "/homeimage/blues.png","/homeimage/purples.png"];
+homeImagePath=["homeimage/greens.png", "homeimage/blues.png","homeimage/purples.png"];
