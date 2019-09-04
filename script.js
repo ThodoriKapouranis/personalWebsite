@@ -26,6 +26,8 @@ window.onload = function(){
     for(i=0;i<4;i++){
         menuLoad(i);
     }
+    loadHome();
+    homeClickEvents()
 };
 
 function createMenuClickEvent(i){ //to give functionality to menu btns
@@ -133,12 +135,40 @@ function loadHome(){
             currentArrow.className="arrow back";
             currentArrow.id="backArrow";
         }
-        currentArrow.src="/icons/arrow.png";
+        currentArrow.src="icons/arrow.png";
         document.getElementsByClassName("home-container")[0].appendChild(currentArrow)
+    }
+
+    var countContainer=document.createElement('div');
+    countContainer.className="imagecount-container";
+    document.getElementsByClassName("home-container")[0].appendChild(countContainer);
+    checkCurrentImage();
+}
+
+function checkCurrentImage(){  
+ //first clear current , then update
+
+
+    for(i=0; i<homeImagePath.length; i++){
+            var newCircle=document.createElement('img');
+            newCircle.className="image-counter";
+
+            if (i==homeImageState){
+                newCircle.src="icons/active.png";
+            }
+            else{
+                newCircle.src="icons/inactive.png";
+            }
+            document.getElementsByClassName('imagecount-container')[0].appendChild(newCircle);
     }
 }
 
-
+function clearImageCount(){
+    for(i=0; i<homeImagePath.length; i++){
+        var oldCircle=document.getElementsByClassName('image-counter')[0];
+        oldCircle.parentNode.removeChild(oldCircle);
+    }
+}
 function shiftRight(){
     if(homeImageState==(homeImagePath.length-1)){
         var leap=homeImageState*100
@@ -159,7 +189,8 @@ function shiftRight(){
         } 
         homeImageState+=1;
     }
-    
+    clearImageCount();
+    checkCurrentImage();
     }
 
 function shiftLeft(){
@@ -182,7 +213,8 @@ function shiftLeft(){
         } 
         homeImageState-=1;
     }
-    
+    clearImageCount();
+    checkCurrentImage();
     }
 
 function homeClickEvents(){
@@ -332,4 +364,3 @@ function clearPage(){ //delete all children of content-container
 
 
 
-homeClickEvents()
