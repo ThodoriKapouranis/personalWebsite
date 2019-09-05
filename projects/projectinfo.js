@@ -6,7 +6,7 @@ projectDate=["June 19 2019", "June 19 2018", "June 18 2018", "XXX", "Xxx", ]
 
 projectImage=["https://i.gyazo.com/95c9645cbed8068a6383b963419ac2e5.png","/icons/jlptvocab.png","","","","",""]
 
-projectRelPath=["/projects/JLPT-Vocab-Info.html"]
+projectRelPath=["projects/JLPT-Vocab-Info.html"]
 
 ///////////////////////////////////////////////////////////////////////////////
 
